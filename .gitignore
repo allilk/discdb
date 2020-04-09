@@ -1,0 +1,6 @@
+Pipfile
+config.py
+manage.py
+db.sqlite3
+migrations/
+.vscode/
