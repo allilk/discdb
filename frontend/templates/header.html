@@ -1,0 +1,23 @@
+{% load static %}
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="w-screen absolute inline-flex bg-gray-600 text-white">
+        <a href=""><div class="flex-1 py-2 m-2 px-4 hover:bg-gray-700">
+            Home
+        </div></a>
+        <a href=""><div class="flex-1 py-2 m-2 px-4 hover:bg-gray-700">
+            About
+        </div></a>
+        <a href=""><div class="flex-1 py-2 m-2 px-4 hover:bg-gray-700">
+            Dumps
+        </div></a>
+    </div><br><br>
+    <div class="w-screen bg-gray-500 flex h-auto mb-4">
+        <div class="w-1/2 bg-gray-700">Col 1</div>
+        <div class="w-1/2 bg-gray-700">Col 2</div>
+    </div>
+    {% block body %}
+    {% endblock %}
+</body>

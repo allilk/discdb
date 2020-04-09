@@ -1,5 +1,4 @@
 from django.apps import AppConfig
 
-
 class discDBConfig(AppConfig):
-    name = 'frontend'
+    name = 'discdb'

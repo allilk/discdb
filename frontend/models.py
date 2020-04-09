@@ -6,7 +6,7 @@ from django.dispatch import receiver
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    
+
     discs_owned = ArrayField(models.IntegerField(null=True))
     discs_wanted = ArrayField(models.IntegerField(null=True))
 
@@ -21,7 +21,7 @@ def create_user_profile(sender, instance, created, **kwargs):
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
-class genDisc(models.model):
+class genDisc(models.Model):
     name = models.CharField(max_length=256)
     desc = models.CharField(max_length=2048)
     ident_code = models.CharField(max_length=64)
@@ -38,10 +38,10 @@ class genDisc(models.model):
     def __str__(self):
         return self.name
 
-class Company(models.model):
+class Company(models.Model):
     name = models.CharField(max_length=256)
     desc = models.CharField(max_length=2048)
-    founded = modes.CharField(max_length=4)
+    founded = models.CharField(max_length=4)
     releases = ArrayField(models.IntegerField())
 
     def __str__(self):
